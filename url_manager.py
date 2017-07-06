@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 class UrlManager(object):
-	def __inti__(self):
+	def __init__(self):
 		self.new_urls = set()
 		self.old_urls = set()
 
@@ -12,7 +12,7 @@ class UrlManager(object):
 			self.new_urls.add(url)
 
 	def add_new_urls(self, urls):
-		if urls in None or len(urls) == 0:
+		if urls is None or len(urls) == 0:
 			return
 		for url in urls:
 			self.add_new_url(url)
